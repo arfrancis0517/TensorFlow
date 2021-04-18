@@ -45,7 +45,16 @@
     1. Freeze the Weights
         We could take the pre-exsting weights from a number of layers from the original model, typically the feature extractors, they are generally the most expensive to learn.
 
-        we only use 
+        we only reuse the earlier layers in my model (except later dense layers....)
+
+        we only train my classification and dense layers with randomly initialized weights.
+
+        It is effective when we have only little dataset.
+
+    2. we can retain the whole CNN, using transferred weights as the starting points.
+        we want to tweak the weights even further to tailor them to our specific dataset and task.
+
+        when we have a lot of own data.
 
 ## CNN Summery    
     CNNs earlier layers extract low level features such as edges. Later layers use the those lower level features to extract higher level features, such as shapes.
